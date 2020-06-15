@@ -1,6 +1,6 @@
 Implementation of Pong with OpenGL and GLFW. Built on Mac OSX.
 `brew install glfw glm` should fetch all required dependencies. Make using `make` or `make debug`.
-Execute using `./bin/start` or `./bin/start -hard_ai` (you need to be in the bin directory, since relative paths are used).
+Execute using `./bin/start` or `./bin/start -hard_ai` (you need to be project root directory, since relative paths are used).
 Default AI just moves paddle to the ball's current position. Hard AI computes predicted intersection of the ball with the paddle's x coordinate and moves there. Hard AI is basically unbeatable.
 
 `main.cpp` contains the GLFW setup code and argument parsing.
