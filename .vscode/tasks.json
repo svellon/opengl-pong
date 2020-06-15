@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+   "version": "0.1.0",
+    "osx": {
+        "command": "bash",
+        "args": ["-c"],
+        "isShellCommand": true,
+        "showOutput": "always",
+        "suppressTaskName": true,
+        "options": {
+            "cwd": "${workspaceRoot}"
+        },
+        "tasks": [
+            {
+                "taskName": "release",
+                "args": [
+                    "make start"
+                ],
+                "isBuildCommand": true
+            },
+            {
+                "taskName": "clean",
+                "args": [
+                    "make clean"
+                ]
+            },
+            {
+                "taskName": "compile w/o makefile",
+                "args": [
+                    "clang++ -Wall -g helloworld.cpp -o hello"
+                ],
+                "echoCommand": true
+            }
+        ]
+    }
+}

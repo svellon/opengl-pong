@@ -1,0 +1,6 @@
+# don't track .o files in obj/ or binaries in bin/
+obj/*
+bin/*
+
+# Mac's custom attributes file
+.DS_Store
